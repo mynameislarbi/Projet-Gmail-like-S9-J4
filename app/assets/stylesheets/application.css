@@ -1,0 +1,109 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.boxes {
+  display: flex;
+  flex-direction: row;
+  
+ 
+}
+
+.list_email {
+  padding-right: 40px;
+  border-right: 3px solid #0e2983;
+  margin-right: 40px;
+  width: 35%;
+}
+
+li {
+  list-style-type: none; 
+  font-weight: 500;
+}
+
+.read_email {
+  font-weight: 300  ;
+}
+
+.index_container {
+  display:flex;
+  flex-direction: column;
+}
+
+.selected_content {
+  width: 100%;
+}
+
+.selected_email {
+  border: 3px solid #0e2983;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.btn {
+  background-color: #0e2983;
+  border: none;
+  color: red;
+  font-size: 16px;
+  border-radius: 12px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.4s;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.btn:hover {
+  background-color: #0e2983;
+  color: rgb(255, 0, 0);
+}
+
+a {
+  color: rgb(255, 0, 0));
+}
+
+body {
+  font-family: 'Fredoka', sans-serif;
+
+}
+
+.boxes {
+  padding: 10px;
+  display: flex;
+  border: 3px solid #0e2983;
+}
+
+.email-elt {
+  margin: 5px;
+  border: 2px solid #ff0000;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#email-list {
+  border: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start ;
+  overflow: auto;
+  height: 500px;
+  width: 110%;
+}
+
+ol {
+  padding-inline-start: 0px;
+}

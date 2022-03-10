@@ -1,0 +1,31 @@
+
+
+<%= link_to "Recevoir un email", emails_path, :method => :post, remote: 'true', class: "btn" %>
+
+<div class="boxes">
+
+  <div class="list_email">
+    <h1 style= "color: gold" >Boîte mails</h1>
+      <ol id="email-list">
+        <% @emails.each do |email| %>
+          <% if email.read %>
+            <div class="email-elt" >
+              <li><%= link_to email.object, email_path(email), remote: 'true' %></li>
+            </div>
+          <% else %>
+            <div class="email-elt">
+              <li><%= link_to email.object, email_path(email), remote: 'true' %></li>
+            </div>
+          <% end %>
+        <% end %>
+      </ol>
+  </div>
+
+  <div class="selected_content">
+    <h1 style= "color:gold" id="selected_email">E-mail</h1>
+      <div id="selected_content"></div>
+  </div>
+</div>
+
+
+
