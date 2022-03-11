@@ -60792,3 +60792,269 @@ Processing by EmailsController#show as JS
 Completed 200 OK in 28ms (Views: 9.1ms | ActiveRecord: 2.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2022-03-10 18:43:09 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by EmailsController#index as HTML
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/controllers/emails_controller.rb:4
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 144ms (Views: 130.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-11 09:53:13 +0100
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/larbi/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by EmailsController#index as HTML
+  [1m[36mEmail Load (0.9ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+  ↳ app/controllers/emails_controller.rb:4
+  Rendering emails/index.html.erb within layouts/application
+  Rendered emails/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 135ms (Views: 122.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/emails/6" for 127.0.0.1 at 2022-03-11 09:53:41 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"6"}
+  [1m[36mEmail Load (0.8ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  Rendering emails/show.js.erb
+  Rendered emails/_selected.html.erb (1.5ms)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/views/emails/show.js.erb:8
+  [1m[36mEmail Update (0.5ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2022-03-11 08:53:41.757708"], ["id", 6]]
+  ↳ app/views/emails/show.js.erb:8
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/views/emails/show.js.erb:8
+  Rendered emails/show.js.erb (10.8ms)
+Completed 200 OK in 39ms (Views: 11.7ms | ActiveRecord: 2.6ms)
+
+
+Started PATCH "/emails/6" for 127.0.0.1 at 2022-03-11 09:53:43 +0100
+Processing by EmailsController#update as JS
+  Parameters: {"id"=>"6"}
+  [1m[36mEmail Load (0.9ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:28
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:29
+  [1m[36mEmail Update (1.9ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2022-03-11 08:53:43.567446"], ["id", 6]]
+  ↳ app/controllers/emails_controller.rb:29
+  [1m[35m (12.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:29
+  Rendering emails/update.js.erb
+  Rendered emails/update.js.erb (0.6ms)
+Completed 200 OK in 46ms (Views: 5.3ms | ActiveRecord: 16.5ms)
+
+
+Started DELETE "/emails/6" for 127.0.0.1 at 2022-03-11 09:53:44 +0100
+Processing by EmailsController#destroy as JS
+  Parameters: {"id"=>"6"}
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:34
+  [1m[36mEmail Destroy (0.4ms)[0m  [1m[31mDELETE FROM "emails" WHERE "emails"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/emails_controller.rb:34
+  [1m[35m (12.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:34
+  Rendering emails/destroy.js.erb
+  Rendered emails/destroy.js.erb (0.6ms)
+Completed 200 OK in 24ms (Views: 3.1ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/emails/3" for 127.0.0.1 at 2022-03-11 09:59:51 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mEmail Load (1.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  Rendering emails/show.js.erb
+  Rendered emails/_selected.html.erb (1.6ms)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/views/emails/show.js.erb:8
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/views/emails/show.js.erb:8
+  Rendered emails/show.js.erb (6.1ms)
+Completed 200 OK in 17ms (Views: 9.0ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/emails" for 127.0.0.1 at 2022-03-11 10:02:42 +0100
+Processing by EmailsController#create as JS
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:16
+  [1m[36mEmail Create (0.8ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at", "read") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["object", "Terrance Beier"], ["body", "Chuck Norris doesn't believe in floating point numbers because they can't be typed on his binary keyboard."], ["created_at", "2022-03-11 09:02:43.417181"], ["updated_at", "2022-03-11 09:02:43.417181"], ["read", false]]
+  ↳ app/controllers/emails_controller.rb:16
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:16
+  Rendering emails/create.js.erb
+  Rendered emails/_email.html.erb (0.6ms)
+  Rendered emails/create.js.erb (1.9ms)
+Completed 200 OK in 1194ms (Views: 3.5ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/emails" for 127.0.0.1 at 2022-03-11 10:02:43 +0100
+Processing by EmailsController#create as JS
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:16
+  [1m[36mEmail Create (0.4ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at", "read") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["object", "Connie Schoen DC"], ["body", "Chuck Norris can access private methods."], ["created_at", "2022-03-11 09:02:43.708826"], ["updated_at", "2022-03-11 09:02:43.708826"], ["read", false]]
+  ↳ app/controllers/emails_controller.rb:16
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:16
+  Rendering emails/create.js.erb
+  Rendered emails/_email.html.erb (0.6ms)
+  Rendered emails/create.js.erb (1.8ms)
+Completed 200 OK in 16ms (Views: 4.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/emails/8" for 127.0.0.1 at 2022-03-11 10:02:46 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"8"}
+  [1m[36mEmail Load (2.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  Rendering emails/show.js.erb
+  Rendered emails/_selected.html.erb (0.8ms)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/views/emails/show.js.erb:8
+  [1m[36mEmail Update (0.5ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2022-03-11 09:02:46.521750"], ["id", 8]]
+  ↳ app/views/emails/show.js.erb:8
+  [1m[35m (14.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/views/emails/show.js.erb:8
+  Rendered emails/show.js.erb (21.1ms)
+Completed 200 OK in 27ms (Views: 7.2ms | ActiveRecord: 17.8ms)
+
+
+Started DELETE "/emails/8" for 127.0.0.1 at 2022-03-11 10:02:51 +0100
+Processing by EmailsController#destroy as JS
+  Parameters: {"id"=>"8"}
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:33
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:34
+  [1m[36mEmail Destroy (0.7ms)[0m  [1m[31mDELETE FROM "emails" WHERE "emails"."id" = $1[0m  [["id", 8]]
+  ↳ app/controllers/emails_controller.rb:34
+  [1m[35m (14.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:34
+  Rendering emails/destroy.js.erb
+  Rendered emails/destroy.js.erb (0.4ms)
+Completed 200 OK in 23ms (Views: 2.5ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/emails/9" for 127.0.0.1 at 2022-03-11 10:02:55 +0100
+Processing by EmailsController#show as JS
+  Parameters: {"id"=>"9"}
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:8
+  Rendering emails/show.js.erb
+  Rendered emails/_selected.html.erb (0.9ms)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/views/emails/show.js.erb:8
+  [1m[36mEmail Update (0.5ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2022-03-11 09:02:55.338197"], ["id", 9]]
+  ↳ app/views/emails/show.js.erb:8
+  [1m[35m (14.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/views/emails/show.js.erb:8
+  Rendered emails/show.js.erb (21.4ms)
+Completed 200 OK in 27ms (Views: 8.0ms | ActiveRecord: 15.9ms)
+
+
+Started PATCH "/emails/9" for 127.0.0.1 at 2022-03-11 10:02:56 +0100
+Processing by EmailsController#update as JS
+  Parameters: {"id"=>"9"}
+  [1m[36mEmail Load (0.8ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:28
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:29
+  [1m[36mEmail Update (10.2ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2022-03-11 09:02:56.598773"], ["id", 9]]
+  ↳ app/controllers/emails_controller.rb:29
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:29
+  Rendering emails/update.js.erb
+  Rendered emails/update.js.erb (1.3ms)
+Completed 200 OK in 68ms (Views: 24.4ms | ActiveRecord: 16.2ms)
+
+
+Started PATCH "/emails/9" for 127.0.0.1 at 2022-03-11 10:02:56 +0100
+Processing by EmailsController#update as JS
+  Parameters: {"id"=>"9"}
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:28
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:29
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:29
+  Rendering emails/update.js.erb
+  Rendered emails/update.js.erb (0.9ms)
+Completed 200 OK in 22ms (Views: 11.1ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/emails/9" for 127.0.0.1 at 2022-03-11 10:02:57 +0100
+Processing by EmailsController#update as JS
+  Parameters: {"id"=>"9"}
+  [1m[36mEmail Load (0.7ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:29
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:29
+  Rendering emails/update.js.erb
+  Rendered emails/update.js.erb (0.7ms)
+Completed 200 OK in 23ms (Views: 7.6ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/emails/9" for 127.0.0.1 at 2022-03-11 10:02:57 +0100
+Processing by EmailsController#update as JS
+  Parameters: {"id"=>"9"}
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:29
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:29
+  Rendering emails/update.js.erb
+  Rendered emails/update.js.erb (0.5ms)
+Completed 200 OK in 16ms (Views: 6.4ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/emails/9" for 127.0.0.1 at 2022-03-11 10:02:57 +0100
+Processing by EmailsController#update as JS
+  Parameters: {"id"=>"9"}
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:28
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:29
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:29
+  Rendering emails/update.js.erb
+  Rendered emails/update.js.erb (0.7ms)
+Completed 200 OK in 28ms (Views: 12.5ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/emails/9" for 127.0.0.1 at 2022-03-11 10:02:58 +0100
+Processing by EmailsController#update as JS
+  Parameters: {"id"=>"9"}
+  [1m[36mEmail Load (0.9ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:28
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:29
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:29
+  Rendering emails/update.js.erb
+  Rendered emails/update.js.erb (0.5ms)
+Completed 200 OK in 43ms (Views: 19.9ms | ActiveRecord: 3.3ms)
+
+
+Started DELETE "/emails/9" for 127.0.0.1 at 2022-03-11 10:03:16 +0100
+Processing by EmailsController#destroy as JS
+  Parameters: {"id"=>"9"}
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/emails_controller.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/emails_controller.rb:34
+  [1m[36mEmail Destroy (0.5ms)[0m  [1m[31mDELETE FROM "emails" WHERE "emails"."id" = $1[0m  [["id", 9]]
+  ↳ app/controllers/emails_controller.rb:34
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/emails_controller.rb:34
+  Rendering emails/destroy.js.erb
+  Rendered emails/destroy.js.erb (0.5ms)
+Completed 200 OK in 15ms (Views: 2.6ms | ActiveRecord: 7.7ms)
+
+
